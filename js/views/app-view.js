@@ -24,9 +24,8 @@ AppView = Backbone.View.extend({
     this.listenTo(this.model, 'remove', this.removeView);
   },
 
-  addOne: function(tododdd) {
-    console.log(tododdd)
-    var view = new TodoView({model: tododdd});
+  addOne: function(todo) {
+    var view = new TodoView({model: todo});
 
     this.views.push(view);
 
